@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && BROCCOLI_COMPRESS=true broccoli build build",
-    "serve": "BROCCOLI_SERVE=true broccoli serve"
+    "clean": "rm -rf build",
+    "build": "npm run clean && BROCCOLI_COMPRESS=true broccoli build build",
+    "serve": "BROCCOLI_SERVE=true broccoli serve",
+    "deploy": "npm run build && gh-pages --dist build --branch master"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "broccoli-merge-trees": "^0.2.3",
     "broccoli-stylus-single": "^0.4.1",
     "broccoli-watched-tree": "0.1.2",
+    "gh-pages": "0.4.0",
     "uglifyify": "^3.0.1"
   }
 }

@@ -1,6 +1,10 @@
-run: build
+run: packages
 	@echo "Launching..."
 	@npm run serve
+
+deploy: packages
+	@echo "Launching..."
+	@npm run deploy
 
 build: packages
 	@echo "Building..."
