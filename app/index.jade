@@ -1,0 +1,72 @@
+extends app/layouts/layout.jade
+
+block content
+  .cover
+    .content
+      .change-the-tool(src='/img/change-the-tool.png')
+      a.btn.light(href='https://app.democracyos.org') Get Started
+      //- .machines
+    .down-arrow
+  main.home
+    .content
+      h1 How it works
+    .how-it-works.content.features
+      div
+        img(src="/img/how-it-works-proposal.png")
+        h2 Propose
+        p Get from zero to democracy in a click. Build proposals and be the change you want to see.
+      div
+        img(src="/img/how-it-works-debate.png")
+        h2 Debate
+        p Debate in a platform that rewards the best arguments and filters that noise that usually ends up calling the trolls.
+      div
+        img(src="/img/how-it-works-vote.png")
+        h2 Vote
+        p With a clear deadline, get everyone on board to reach a voted decision and avoid endless debates.
+
+    .featurevideo
+      .video
+        iframe(width='100%', height='480', src='https://www.youtube.com/embed/NXfYNdapq3Q', frameborder='0')
+      .quote
+        p “We are 21st century citizens doing our best to interact with 19th century designed institutions that are based on an information technology of the 15th century. <br> It's time we start asking: What is democracy for the internet era?”
+        p.author Pia Mancini
+        p.detail The DemocracyOS at TED Global 2014
+
+    .content
+      h1 The Technology
+    .the-technology.content.features
+      div
+        img(src="/img/the-technology-languages.png")
+        h2 Open Source
+        p Join a community that's hacking the future of democracy today. We are 100% open source with an GPLv3 license.
+      div
+        img(src="/img/the-technology-opensource.png")
+        h2 Multi-Language
+        p DemocracyOS has been translated into 15+ languages, with new communities joining every week.
+
+    .press
+      .content
+        h1 Media
+      .press-items.content
+        a(href='http://www.wired.com/2014/05/democracy-os/', target='_blank')
+          img(src='/img/press-wired.png')
+        a(href='http://www.vice.com/read/the-future-of-protest-looks-a-lot-like-the-past', target='_blank')
+          img(src='/img/press-vice.png')
+        a(href='http://www.theatlantic.com/international/archive/2014/07/designing-an-operating-system-for-democracy/374526/', target='_blank')
+          img(src='/img/press-theatlantic.png')
+        a(href='http://www.fastcompany.com/3043388/the-y-combinator-chronicles/why-y-combinator-funded-a-radical-political-party-in-argentina?partner=rss', target='_blank')
+          img(src='/img/press-fastcompany.png')
+        a(href='https://www.youtube.com/watch?v=7bAOT-57KeE', target='_blank')
+          img(src='/img/press-bbc.png')
+
+    .content
+      h1 Who we are
+    .who-we-are.content.features
+      div
+        img(src="/img/who-we-are-der.png")
+        h2 The Foundation
+        p Our technology is developed and protected by <a href="http://democraciaenred.org" target="_blank">Democracia en Red</a>, a nonprofit organization based in Buenos Aires, Argentina.
+      div
+        img(src="/img/who-we-are-yc.png")
+        h2 Our Backers
+        p We are proud members of <a href="https://ycombinator.com" target="_blank">Y Combinator</a>, the most prestigious high tech startup accelerator in the world.
