@@ -1,5 +1,6 @@
 doctype html
 html(lang='en')
+  block vars
   head
     meta(charset='utf-8')
     meta(content='width=device-width, initial-scale=1.0, maximum-scale=1', name='viewport')
@@ -9,6 +10,7 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='/css/app.css')
   body
     include ../partials/header
-    block content
+    div(class=page)
+      block content
     script(src='/js/app.js')
     link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lato:400,300,700|Montserrat')

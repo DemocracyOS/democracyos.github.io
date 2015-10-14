@@ -1,13 +1,16 @@
 extends app/layouts/layout.jade
 
+block vars
+  - var page = 'home'
+
 block content
   .cover
     .content
       .change-the-tool(src='/img/change-the-tool.png')
-      a.btn.light(href='https://app.democracyos.org') Get Started
+      a.btn.light(href='https://app.democracyos.org/signin') Get Started
       //- .machines
     .down-arrow
-  main.home
+  main
     .content
       h1 How it works
     .how-it-works.content.features

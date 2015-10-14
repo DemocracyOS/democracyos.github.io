@@ -1,4 +1,10 @@
+.header-bg
 header.header
   .logo
-    a(href='/')
-      img(src='/img/logo.png')
+    a(href='/') &nbsp;
+    img.desktop(src='/img/logo.png')
+    img.mobile(src='/img/isologo.png')
+  menu
+    a(href='/', class=page === 'home' ? 'active' : '') Home
+    a(href='/about-us.html', class=page === 'about-us' ? 'active' : '') About
+    a(href='http://blog.democracyos.org' target='_blank') Blog
