@@ -15,3 +15,30 @@
     column-gap: 4em
     column-width: 320px
     line-height: 1.8
+
+.the-team
+  text-align: center
+
+  .item
+    position: relative
+    display: inline-block
+    width: 200px
+    margin: 0 30px 30px
+
+  .pic
+    background-size: cover
+    bacground-repeat: no-repeat
+    background-position: center center
+
+    &:after
+      content: ''
+      display: block
+      padding-top: 80%
+
+  p
+    font-weight: 700
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    cursor: default
+

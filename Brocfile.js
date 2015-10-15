@@ -31,8 +31,6 @@ var css = stylus(
   { compress: doCompress }
 )
 
-css = autoprefixer(css)
-
 var html = jade(new Funnel(app, {include: ['*.jade']}), {
   pretty: !doCompress
 })
@@ -41,10 +39,13 @@ var img = new Funnel(app, {include: ['img/**/*']})
 
 var trees = [js, css, html, img]
 
-if (doServe) trees.push(new Funnel(app, {include: ['layouts/*.jade']}))
+if (doServe) trees.push(new Funnel(app, {
+  include: ['layouts/*.jade', 'partials/*.jade']
+}))
 
 var tree = mergeTrees(trees)
 
-if (doCompress) tree = assetRev(tree)
+tree = autoprefixer(tree)
+tree = assetRev(tree)
 
 module.exports = tree
