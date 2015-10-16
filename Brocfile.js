@@ -37,7 +37,9 @@ var html = jade(new Funnel(app, {include: ['*.jade']}), {
 
 var img = new Funnel(app, {include: ['img/**/*']})
 
-var trees = [js, css, html, img]
+var statics = new Funnel(app, { srcDir: 'statics' })
+
+var trees = [js, css, html, img, statics]
 
 if (doServe) trees.push(new Funnel(app, {
   include: ['layouts/*.jade', 'partials/*.jade']
