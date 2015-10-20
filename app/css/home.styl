@@ -35,19 +35,6 @@
       display: block
       padding-top: 21%
 
-  .machines
-    width: 100%
-    margin-top: 8em
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center top
-    background-image: url('../img/machines.png')
-
-    &:after
-      content: ''
-      display: block
-      padding-top: 49%
-
   .down-arrow
     position: absolute
     bottom: 1em
@@ -60,6 +47,22 @@
     background-position: center top
     background-image: url('../img/down-arrow.svg')
 
+.machines
+  margin: 0 auto
+  width: 80%
+  margin-top: -10em
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center top
+  background-image: url('../img/machines.png')
+  position: relative
+  @media (max-width: 767px)
+    display: none;
+
+  &:after
+    content: ''
+    display: block
+    padding-top: 49%
 
 .features
   display: flex
