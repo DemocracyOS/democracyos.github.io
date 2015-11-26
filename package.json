@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf build",
-    "build": "npm run clean && BROCCOLI_COMPRESS=true broccoli build build",
-    "serve": "BROCCOLI_SERVE=true broccoli serve",
+    "build": "npm run clean && NODE_PATH=. BROCCOLI_COMPRESS=true broccoli build build",
+    "serve": "NODE_PATH=. BROCCOLI_SERVE=true broccoli serve",
     "deploy": "npm run build && gh-pages --dist build --branch master",
     "start": "npm run serve"
   },
@@ -31,5 +31,8 @@
     "broccoli-watched-tree": "0.1.2",
     "gh-pages": "0.4.0",
     "uglifyify": "^3.0.1"
+  },
+  "dependencies": {
+    "t-component": "^1.0.0"
   }
 }

@@ -1,56 +1,56 @@
 extends app/layouts/layout.jade
 
 block vars
-  - var title = 'Change the Tool'
+  - var title =t('Change the Tool')
   - var page = 'home'
 
 block content
   .cover
     .content
       .change-the-tool(src='/img/change-the-tool.png')
-      a.btn.light(href='https://app.democracyos.org/signin') Get Started
+      a.btn.light(href='https://app.democracyos.org/signin')=t('Get started')
     .down-arrow
   .machines
   main
     .content
-      h1 How it works
+      h1=t('How it works')
     .how-it-works.content.features
       div
         img(src="/img/how-it-works-proposal.png")
-        h2 Propose
-        p Get from zero to democracy in a click. Build proposals and be the change you want to see.
+        h2=t('Propose')
+        p=t('Get from zero to democracy in a click. Build proposals and be the change you want to see.')
       div
         img(src="/img/how-it-works-debate.png")
-        h2 Debate
-        p Debate in a platform that rewards the best arguments and filters that noise that usually ends up calling the trolls.
+        h2=t('Debate')
+        p=t('Debate in a platform that rewards the best arguments and filters that noise that usually ends up calling the trolls.')
       div
         img(src="/img/how-it-works-vote.png")
-        h2 Vote
-        p With a clear deadline, get everyone on board to reach a voted decision and avoid endless debates.
+        h2=t('Vote')
+        p=t('With a clear deadline, get everyone on board to reach a voted decision and avoid endless debates.')
 
     .featurevideo
       .video
         iframe(width='100%', height='480', src='https://www.youtube.com/embed/NXfYNdapq3Q', frameborder='0')
       .quote
-        p “We are 21st century citizens doing our best to interact with 19th century designed institutions that are based on an information technology of the 15th century. <br> It's time we start asking: What is democracy for the internet era?”
+        p=t('"We are 21st century citizens doing our best to interact with 19th century designed institutions that are based on an information technology of the 15th century. <br> It\'s time we start asking: What is democracy for the internet era?"')
         p.author Pia Mancini
-        p.detail The DemocracyOS at TED Global 2014
+        p.detail=t('The DemocracyOS at TED Global 2014')
 
     .content
-      h1 The Technology
+      h1=t('The Technology')
     .the-technology.content.features
       div
         img(src="/img/the-technology-languages.png")
-        h2 Open Source
-        p Join a community that's hacking the future of democracy today. We are 100% open source with an GPLv3 license.
+        h2=t('Open Source')
+        p=t('Join a community that\'s hacking the future of democracy today. We are 100% open source with an GPLv3 license.')
       div
         img(src="/img/the-technology-opensource.png")
-        h2 Multi-Language
-        p DemocracyOS has been translated into 15+ languages, with new communities joining every week.
+        h2=t('Multi-Language')
+        p=t('DemocracyOS has been translated into 15+ languages, with new communities joining every week.')
 
     .press
       .content
-        h1 Media
+        h1=t('Media')
       .press-items.content
         a(href='http://www.wired.com/2014/05/democracy-os/', target='_blank')
           img(src='/img/press-wired.png')
@@ -64,15 +64,15 @@ block content
           img(src='/img/press-bbc.png')
 
     .content
-      h1 Who we are
+      h1=t('Who we are')
     .who-we-are.content.features
       div
         img(src="/img/who-we-are-der.png")
-        h2 The Foundation
-        p Our technology is developed by <a href="http://democraciaenred.org" target="_blank">Democracia en Red</a>, a nonprofit organization based in Buenos Aires, Argentina.
+        h2=t('The Foundation')
+        p!=t('Our technology is developed by <a href="http://democraciaenred.org" target="_blank">Democracia en Red</a>, a nonprofit organization based in Buenos Aires, Argentina.')
 
     main.content
-      h1 The Team
+      h1=t('The Team')
       .the-team
         .item
           .pic(style="background-image: url('/img/team/agustin.png')")
@@ -130,10 +130,10 @@ block content
           p Pantufla
 
       .intro
-        h1 How it all began
+        h1=t('How it all began')
         img.equipo(src='/img/about-us-equipo.jpg')
-        p In April 2012 a group of activists, entrepreneurs, students and hackers got together in the city of Buenos Aires with a simple question in mind: <strong>What is democracy for the internet era?</strong> Many of the so-called <em>modern democracies</em> still run the same way they did almost two centuries ago: as citizens we only get to interact with the political system once every couple of years. In an era where online access starts to become commonplace around the world, we are aware of how the internet changed the way we work, communicate and relate with each other. But politics and governments haven’t changed at all. So we set out to find a reliable way to hack the system. <br> Our first step was to create an open source, free software with an easy user experience for citizens to get informed, debate and vote on every single bill presented in Congress. <strong>DemocracyOS</strong> evolved to become one of the most used platforms for collaborative decision-making and it got translated into 15 languages. It has been used in Tunisia to debate its national constitution; by the Federal Government of Mexico to develops its open goverment policy; by the youngest parlamentarian in Kenya to consult his constituency or the Congress of Buenos Aires becoming the first experience on digital democracy in the American continent. Meet our team!
+        p!=t('How it all began.text')
 
       .contact.content
-        p.text-center If you have questions or ideas to share, drop us a line at
+        p.text-center=t('If you have questions or ideas to share, drop us a line at')
         p.text-center.email: a(href='mailto:speak@democracyos.org') speak@democracyos.org
