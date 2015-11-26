@@ -1,12 +1,21 @@
-.header-bg
-header.header
-  .logo
-    a(href='/')
-      img.desktop(src='/img/logo.png')
-      img.mobile(src='/img/isologo.png')
-  menu
-    a(href='http://docs.democracyos.org' target='_blank')=t('Documentation')
-    a(href='http://blog.democracyos.org' target='_blank') Blog
-    a(href='https://github.com/DemocracyOS/app' target='_blank') Github
-    a.language(href='/index_es.html' class=t('header.spanish.class'))=t('Spanish')
-    a.language(href='/index.html' class=t('header.english.class'))=t('English')
+nav.navbar.navbar-inverse
+  .navbar-header
+    a.navbar-brand(href='/')
+      img.desktop(alt='DemocracyOS logo' src='/img/logo.png')
+      img.mobile(alt='DemocracyOS logo' src='/img/isologo.png')
+    button.navbar-toggle(type='button' data-toggle='collapse' data-target='#menu')
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+  #menu.navbar-collapse.collapse
+    ul.nav.navbar-nav.navbar-right
+      li
+        a(href='http://docs.democracyos.org' target='_blank')=t('Documentation')
+      li
+        a(href='http://blog.democracyos.org' target='_blank') Blog
+      li
+        a(href='https://github.com/DemocracyOS/app' target='_blank') Github
+      li
+        a.language(href='/index_es.html' class=t('header.spanish.class'))=t('Spanish')
+      li
+        a.language(href='/index.html' class=t('header.english.class'))=t('English')
