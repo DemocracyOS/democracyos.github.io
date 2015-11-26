@@ -1,64 +1,27 @@
-.header-bg
-  position: absolute
-  left: 0
-  top: 0
-  width: 100%
-  height: 74px
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center top
-  background-image: url('../img/cover-hands-2.jpg')
+nav.navbar
+  border 0
+  height 74px
+  padding 20px 10px
+  position absolute
+  background-color transparent
+  width 100%
+  z-index 1030
+  
+  a.navbar-brand
+    padding 0 15px
 
-.header
-  position: absolute
-  left: 0
-  top: 0
-  padding: 10px 20px
-  width: 100%
-
-  .logo,
-  menu
-    position: relative
-    z-index: 10
+  img
+    height 100%
     
-    a.hide
-      display none
-
-  .logo
-    position: relative
-    float: left
-    padding: 10px 0
-    height: 50px
-    z-index: 5
-
-    img
-      height: 100%
-
-    .mobile
-      display: none
+  .mobile
+      display none !important
 
     @media all and (max-width: 700px)
       .desktop
-        display: none
+        display none !important
 
       .mobile
-        display: block
+        display block !important
 
-
-  menu
-    float: right
-    text-align: right
-    transition: all .1s linear
-
-    a
-      display: inline-block
-      padding: 0 1em
-      color: rgba(#f5f5f5,.7)
-      font-size: 18px
-      text-decoration: none
-      text-rendering: optimizeLegibility
-      font-weight: 300
-
-      &.active,
-      &:hover
-        color: #f5f5f5
+      #menu
+        margin-top 20px
