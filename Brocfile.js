@@ -32,7 +32,7 @@ var css = stylus(
   [new Funnel(app, {include: ['css/**/*.styl']})],
   'css/index.styl',
   'css/app.css',
-  { compress: doCompress }
+  {compress: doCompress}
 )
 
 t.en = en
@@ -53,19 +53,19 @@ function translate(lang) {
 
 var htmlEnglish = jade(new Funnel(app, {include: ['*.jade'], getDestinationPath: getDestinationPath('en')}), {
   pretty: !doCompress,
-  data: { t: translate('en') }
+  data: {t: translate('en')}
 })
 
 var htmlSpanish = jade(new Funnel(app, {include: ['*.jade'], getDestinationPath: getDestinationPath('es')}), {
   pretty: !doCompress,
-  data: { t: translate('es') }
+  data: {t: translate('es')}
 })
 
 var img = new Funnel(app, {include: ['img/**/*']})
 
-var statics = new Funnel(app, { srcDir: 'statics' })
+var statics = new Funnel(app, {srcDir: 'statics'})
 
-var readme = 'README.md'
+var readme = new Funnel('.', {files: ['README.md']})
 
 var trees = [js, css, htmlEnglish, htmlSpanish, img, statics, readme]
 
