@@ -65,7 +65,9 @@ var img = new Funnel(app, {include: ['img/**/*']})
 
 var statics = new Funnel(app, { srcDir: 'statics' })
 
-var trees = [js, css, htmlEnglish, htmlSpanish, img, statics]
+var readme = 'README.md'
+
+var trees = [js, css, htmlEnglish, htmlSpanish, img, statics, readme]
 
 if (doServe) trees.push(new Funnel(app, {
   include: ['layouts/*.jade', 'partials/*.jade']
