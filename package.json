@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf build",
+    "clean": "rimraf build",
     "build": "npm run clean && NODE_PATH=. BROCCOLI_COMPRESS=true broccoli build build",
-    "serve": "NODE_PATH=. BROCCOLI_SERVE=true broccoli serve",
+    "serve": "rimraf tmp && mkdirp tmp && NODE_PATH=. BROCCOLI_SERVE=true broccoli serve",
     "deploy": "npm run build && gh-pages --dist build --branch master",
     "start": "npm run serve"
   },
@@ -31,6 +31,8 @@
     "broccoli-watched-tree": "0.1.2",
     "clone": "^1.0.2",
     "gh-pages": "0.4.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.2",
     "uglifyify": "^3.0.1"
   },
   "dependencies": {
