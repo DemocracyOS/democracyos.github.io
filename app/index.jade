@@ -8,7 +8,7 @@ block content
   .cover
     .content
       .change-the-tool(src='/img/change-the-tool.png')
-      a.btn.light(href='https://app.democracyos.org/signin')=t('Get started')
+      a.btn.light(href='https://app.democracyos.org/signin', target='_blank')= t('Get started')
     .down-arrow
   .machines
   main
@@ -18,15 +18,15 @@ block content
       div
         img(src="/img/how-it-works-proposal.png")
         h2=t('Propose')
-        p=t('Get from zero to democracy in a click. Build proposals and be the change you want to see.')
+        p=t('propose.text')
       div
         img(src="/img/how-it-works-debate.png")
         h2=t('Debate')
-        p=t('Debate in a platform that rewards the best arguments and filters that noise that usually ends up calling the trolls.')
+        p=t('debate.text')
       div
         img(src="/img/how-it-works-vote.png")
         h2=t('Vote')
-        p=t('With a clear deadline, get everyone on board to reach a voted decision and avoid endless debates.')
+        p=t('vote.text')
 
     .featurevideo
       .video
@@ -41,12 +41,12 @@ block content
     .the-technology.content.features
       div
         img(src="/img/the-technology-languages.png")
-        h2=t('Open Source')
-        p=t('Join a community that\'s hacking the future of democracy today. We are 100% open source with an GPLv3 license.')
+        h2= t('Open Source')
+        p= t('open-source.text')
       div
         img(src="/img/the-technology-opensource.png")
-        h2=t('Multi-Language')
-        p=t('DemocracyOS has been translated into 15+ languages, with new communities joining every week.')
+        h2= t('Multi-Language')
+        p= t('DemocracyOS has been translated into 15+ languages, with new communities joining every week.')
 
     .press
       .content
@@ -68,8 +68,8 @@ block content
     .who-we-are.content.features
       div
         img(src="/img/who-we-are-der.png")
-        h2=t('The Foundation')
-        p!=t('Our technology is developed by <a href="http://democraciaenred.org" target="_blank">Democracia en Red</a>, a nonprofit organization based in Buenos Aires, Argentina.')
+        h2=t('the-foundation')
+        p!=t('the-foundation.text')
 
     main.content
       h1=t('The Team')
